@@ -12,7 +12,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--incognito')
 options.add_argument('--headless')
-driver = webdriver.Chrome("/Users/kalle/Downloads/chromedriver", chrome_options=options)
+driver = webdriver.Chrome("/home/benjaming/Downloads/chromedriver_linux64/chromedriver", chrome_options=options)
 
 search_term = str(raw_input("What are you looking for?\n:"))
 
@@ -112,6 +112,6 @@ print(json.dumps(best_deal_product.serialize(), indent=4, sort_keys=True))
 
 options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
-driver = webdriver.Chrome("/Users/kalle/Downloads/chromedriver", chrome_options=options)
+driver = webdriver.Chrome("/home/benjaming/Downloads/chromedriver_linux64/chromedriver", chrome_options=options)
 driver.get(best_deal_product.link)
 driver.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 't')
